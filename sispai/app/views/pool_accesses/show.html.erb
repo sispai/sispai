@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is opening:</strong>
+  <%= @pool_access.is_opening %>
+</p>
+
+<p>
+  <strong>Emergency:</strong>
+  <%= @pool_access.emergency %>
+</p>
+
+<p>
+  <strong>Timestamp:</strong>
+  <%= @pool_access.timestamp %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @pool_access.user_id %>
+</p>
+
+<p>
+  <strong>Pool:</strong>
+  <%= @pool_access.pool_id %>
+</p>
+
+<%= link_to 'Edit', edit_pool_access_path(@pool_access) %> |
+<%= link_to 'Back', pool_accesses_path %>

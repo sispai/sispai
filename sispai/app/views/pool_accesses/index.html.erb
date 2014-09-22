@@ -1,0 +1,33 @@
+<h1>Listing pool_accesses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Is opening</th>
+      <th>Emergency</th>
+      <th>Timestamp</th>
+      <th>User</th>
+      <th>Pool</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pool_accesses.each do |pool_access| %>
+      <tr>
+        <td><%= pool_access.is_opening %></td>
+        <td><%= pool_access.emergency %></td>
+        <td><%= pool_access.timestamp %></td>
+        <td><%= pool_access.user_id %></td>
+        <td><%= pool_access.pool_id %></td>
+        <td><%= link_to 'Show', pool_access %></td>
+        <td><%= link_to 'Edit', edit_pool_access_path(pool_access) %></td>
+        <td><%= link_to 'Destroy', pool_access, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pool access', new_pool_access_path %>

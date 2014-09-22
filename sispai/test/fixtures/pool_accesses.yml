@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_opening: false
+  emergency: false
+  timestamp: 2014-09-21 22:15:41
+  user_id: 1
+  pool_id: 1
+
+two:
+  is_opening: false
+  emergency: false
+  timestamp: 2014-09-21 22:15:41
+  user_id: 1
+  pool_id: 1

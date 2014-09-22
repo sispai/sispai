@@ -1,0 +1,2 @@
+class PoolAccess < ActiveRecord::Base
+end

@@ -1,0 +1,37 @@
+<%= form_for(@pool_access) do |f| %>
+  <% if @pool_access.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pool_access.errors.count, "error") %> prohibited this pool_access from being saved:</h2>
+
+      <ul>
+      <% @pool_access.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :is_opening %><br>
+    <%= f.check_box :is_opening %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency %><br>
+    <%= f.check_box :emergency %>
+  </div>
+  <div class="field">
+    <%= f.label :timestamp %><br>
+    <%= f.datetime_select :timestamp %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pool_id %><br>
+    <%= f.number_field :pool_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

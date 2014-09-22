@@ -1,0 +1,5 @@
+class Pool < ActiveRecord::Base
+	belongs_to :user, through: this.@owner
+	has_many :pool_access
+	has_many :user, through: :pool_access
+end
